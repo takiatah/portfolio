@@ -6,7 +6,7 @@ export function Planet({ accentVar, className, ringed = false }: { accentVar: st
       <span
         className="absolute inset-0 rounded-full"
         style={{
-          background: `radial-gradient(circle at 32% 30%, oklch(1 0 0 / 0.22), color-mix(in oklch, var(${accentVar}) 62%, oklch(0.18 0.03 265)) 40%, oklch(0.14 0.03 265) 100%)`,
+          background: `radial-gradient(circle at 32% 30%, oklch(1 0 0 / 0.50), color-mix(in oklch, var(${accentVar}) 62%, oklch(0.18 0.03 265)) 40%, oklch(0.14 0.03 265) 100%)`,
           boxShadow: `0 0 32px -10px color-mix(in oklch, var(${accentVar}) 55%, transparent)`,
         }}
       />
