@@ -6,13 +6,13 @@ export function Planet({ accentVar, className, ringed = false }: { accentVar: st
       <span
         className="absolute inset-0 rounded-full"
         style={{
-          background: `radial-gradient(circle at 32% 30%, oklch(1 0 0 / 0.55), var(${accentVar}) 38%, oklch(0.2 0.04 265) 100%)`,
-          boxShadow: `0 0 40px -6px var(${accentVar})`,
+          background: `radial-gradient(circle at 32% 30%, oklch(1 0 0 / 0.22), color-mix(in oklch, var(${accentVar}) 62%, oklch(0.18 0.03 265)) 40%, oklch(0.14 0.03 265) 100%)`,
+          boxShadow: `0 0 32px -10px color-mix(in oklch, var(${accentVar}) 55%, transparent)`,
         }}
       />
       {ringed && (
         <span
-          className="absolute left-1/2 top-1/2 h-[30%] w-[150%] -translate-x-1/2 -translate-y-1/2 -rotate-12 rounded-[50%] border-2 opacity-60"
+          className="absolute left-1/2 top-1/2 h-[30%] w-[150%] -translate-x-1/2 -translate-y-1/2 -rotate-12 rounded-[50%] border-2 opacity-40"
           style={{ borderColor: `var(${accentVar})` }}
         />
       )}
