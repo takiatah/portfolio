@@ -49,6 +49,7 @@ export const dataLabProjects: Project[] = [
     sourceAvailability: { type: 'public', repoUrl: repoLinks.onlineRetail },
     status: 'complete',
   },
+<<<<<<< HEAD
   {
     slug: 'bellabeat',
     title: 'Bellabeat Case Study',
@@ -71,6 +72,10 @@ export const getDataLabCaseStudyHref = (slug: string) => {
   return undefined
 }
 
+=======
+]
+
+>>>>>>> d0bfc794eb4f5fe4767b09c0f61e5b71fa0ee8aa
 /* ----------------------------- Machine Learning Lab ---------------------------- */
 
 export const titanicProject: Project = {
