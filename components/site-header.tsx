@@ -27,7 +27,7 @@ export function SiteHeader() {
                 href={d.href}
                 className="rounded-md px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
               >
-                {d.name.replace(' Lab', '').replace(' Constellation', '')}
+                {d.name.replace(' Lab', '').replace(' Constellation', '').replace('Bay', '').replace('Observatory', '').replace('Design Studio', 'Web Design').replace('Architect', 'Web Development').replace('Engineering', 'Software Engineering')}
               </Link>
             </li>
           ))}

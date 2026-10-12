@@ -119,5 +119,5 @@ export const accomplishments = [
   'Empowering Advancement Scholar',
   'Pride of NY Scholarship',
   "Dean's List",
-  'HS Valedictorian',
+  'High School Valedictorian',
 ]

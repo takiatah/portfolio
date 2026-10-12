@@ -76,7 +76,7 @@ export default function ResumePage() {
               </ol>
             </SectionCard>
 
-            <SectionCard title="Projects">
+            <SectionCard title="Relevant Projects">
               <ul className="grid gap-4 sm:grid-cols-2">
                 {resumeProjects.map((p) => (
                   <li key={p.name} className="flex flex-col gap-1">
@@ -142,7 +142,7 @@ export default function ResumePage() {
             <SectionCard title="Accomplishments">
               <ul className="flex flex-wrap gap-1.5">
                 {accomplishments.map((a) => (
-                  <li key={a} className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted-foreground">
+                  <li key={a} className="rounded-full border border-border px-2.5 py-0.5 text-sm text-muted-foreground">
                     {a}
                   </li>
                 ))}
