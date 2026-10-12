@@ -44,12 +44,14 @@ export const dataLabProjects: Project[] = [
     title: 'Online Retail II — Sales Analysis',
     category: 'Data Analysis',
     summary:
-      'Exploratory sales analysis of the Online Retail II transactional dataset, cleaning invoice-level records and summarizing revenue patterns across products, customers, and time.',
-    tech: ['Python', 'Pandas', 'Data cleaning', 'Data visualization'],
+      'An exploratory analysis of online retail transactions examining customer revenue concentration, monthly sales trends, product category performance, cancellations, and geographic order distribution.',
+    tech: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Data visualization'],
     sourceAvailability: { type: 'public', repoUrl: repoLinks.onlineRetail },
+    links: [
+      { label: 'Kaggle Notebook', href: externalLinks.onlineRetailKaggleNotebook },
+    ],
     status: 'complete',
   },
-<<<<<<< HEAD
   {
     slug: 'bellabeat',
     title: 'Bellabeat Case Study',
@@ -69,13 +71,10 @@ export const dataLabProjects: Project[] = [
 
 export const getDataLabCaseStudyHref = (slug: string) => {
   if (slug === 'bellabeat') return '/data-lab/bellabeat'
+  if (slug === 'online-retail-ii') return '/data-lab/online-retail-ii'
   return undefined
 }
 
-=======
-]
-
->>>>>>> d0bfc794eb4f5fe4767b09c0f61e5b71fa0ee8aa
 /* ----------------------------- Machine Learning Lab ---------------------------- */
 
 export const titanicProject: Project = {

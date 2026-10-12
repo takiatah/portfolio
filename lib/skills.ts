@@ -31,19 +31,11 @@ export const skillCategories: SkillCategory[] = [
     accentVar: '--accent-engineering',
     map: { x: 20, y: 22 },
     skills: [
-<<<<<<< HEAD
       { name: 'Python', experience: 'applied', usedIn: 'Titanic Predictions, Online Retail II, Bellabeat' },
       { name: 'Java', experience: 'applied', usedIn: 'Snake Game, Network Routing, Pathfinding Game' },
       { name: 'C', experience: 'coursework', usedIn: 'C Memory Allocator' },
       { name: 'OCaml', experience: 'coursework', usedIn: 'Interactive Fiction Engine' },
       { name: 'SQL', experience: 'applied', usedIn: 'Bellabeat case study' },
-=======
-      { name: 'Python', experience: 'applied', usedIn: 'Titanic Predictions, Online Retail II' },
-      { name: 'Java', experience: 'applied', usedIn: 'Snake Game, Network Routing, Pathfinding Game' },
-      { name: 'C', experience: 'coursework', usedIn: 'C Memory Allocator' },
-      { name: 'OCaml', experience: 'coursework', usedIn: 'Interactive Fiction Engine' },
-      { name: 'SQL', experience: 'coursework', usedIn: 'Querying relational data' },
->>>>>>> d0bfc794eb4f5fe4767b09c0f61e5b71fa0ee8aa
       { name: 'JavaScript', experience: 'applied', usedIn: 'Web projects' },
     ],
   },
@@ -54,7 +46,6 @@ export const skillCategories: SkillCategory[] = [
     accentVar: '--accent-data',
     map: { x: 80, y: 22 },
     skills: [
-<<<<<<< HEAD
       { name: 'Pandas', experience: 'applied', usedIn: 'Titanic Predictions, Online Retail II, Bellabeat' },
       { name: 'Data cleaning', experience: 'applied', usedIn: 'Online Retail II, Bellabeat' },
       { name: 'Exploratory data analysis', experience: 'applied', usedIn: 'Online Retail II, Titanic, Bellabeat' },
@@ -65,18 +56,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Google Sheets', experience: 'applied' },
       { name: 'SQL', experience: 'applied', usedIn: 'Bellabeat case study' },
       { name: 'SQLite', experience: 'applied', usedIn: 'Bellabeat Fitbit database' },
-=======
-      { name: 'Pandas', experience: 'applied', usedIn: 'Titanic Predictions, Online Retail II' },
-      { name: 'Data cleaning', experience: 'applied', usedIn: 'Online Retail II' },
-      { name: 'Exploratory data analysis', experience: 'applied', usedIn: 'Online Retail II, Titanic' },
-      { name: 'Data visualization', experience: 'applied', usedIn: 'China–Russia dashboard' },
-      { name: 'Statistical analysis', experience: 'coursework' },
-      { name: 'Tableau', experience: 'coursework' },
-      { name: 'Excel', experience: 'applied' },
-      { name: 'Google Sheets', experience: 'applied' },
-      { name: 'SQL', experience: 'coursework' },
-      { name: 'SQLite', experience: 'coursework' },
->>>>>>> d0bfc794eb4f5fe4767b09c0f61e5b71fa0ee8aa
       { name: 'PostgreSQL', experience: 'learning' },
     ],
   },
@@ -124,11 +103,7 @@ export const skillCategories: SkillCategory[] = [
     map: { x: 50, y: 88 },
     skills: [
       { name: 'Git & GitHub', experience: 'applied', usedIn: 'All public repositories' },
-<<<<<<< HEAD
       { name: 'Jupyter Notebook', experience: 'applied', usedIn: 'Titanic Predictions, Bellabeat' },
-=======
-      { name: 'Jupyter Notebook', experience: 'applied', usedIn: 'Titanic Predictions' },
->>>>>>> d0bfc794eb4f5fe4767b09c0f61e5b71fa0ee8aa
       { name: 'Figma', experience: 'applied', usedIn: 'Synergy concept' },
       { name: 'Maven', experience: 'coursework', usedIn: 'Java coursework' },
       { name: 'OUnit', experience: 'coursework', usedIn: 'OCaml Interactive Fiction Engine' },

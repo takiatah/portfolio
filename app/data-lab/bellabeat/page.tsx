@@ -300,10 +300,6 @@ export default function BellabeatPage() {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p className="text-sm">
-            Findings and recommendations below are taken from the project README and the Tableau dashboards. They are
-            not re-estimated on this page.
-          </p>
         </Section>
 
         <Section title="Recommendations">
