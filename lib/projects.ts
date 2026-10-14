@@ -131,10 +131,19 @@ export const engineeringProjects: Project[] = [
     title: 'Java Snake Game',
     category: 'Game Development',
     summary:
-      'A classic Snake game in Java with real-time keyboard controls, growing-tail collision detection, and score tracking.',
+      'A classic Snake game in Java with real-time keyboard controls, growing-tail collision detection, random golden apple generation, and score tracking.',
     tech: ['Java', 'Object-oriented design', 'Game loop'],
     sourceAvailability: { type: 'public', repoUrl: repoLinks.snakeGame },
     status: 'complete',
+    media: {
+      kind: 'gif',
+      src: '/media/snake-game.gif',
+      available: true,
+      alt: 'Gameplay recording of the snake game showing the snake navigating the board, eating apples, and growing its tail.',
+      caption: 'Gameplay demo: the snake navigates the board, eating apples, and growing its tail.',
+      width: 95,
+      height: 100,
+    },
     sections: [
       {
         heading: 'Overview',
@@ -147,6 +156,9 @@ export const engineeringProjects: Project[] = [
         body: [
           'A fixed-interval game loop updates movement and redraws the board each tick.',
           'Collision checks against the board edges and the snake body determine when the game ends.',
+          'User can select the color of the snake at the start of the game.',
+          'Random golden apple generation ensures the game is challenging and fun.',
+          'Score tracking is displayed in the top-left corner of the screen.',
         ],
       },
     ],
@@ -182,31 +194,41 @@ export const engineeringProjects: Project[] = [
     category: 'Game AI',
     summary:
       'A game in which characters navigate a map with pathfinding and switch between behaviors such as chasing, retreating, and building health.',
-    tech: ['Java', 'Pathfinding', 'Agent behaviors'],
+    tech: ['Java', 'Pathfinding', 'Object-oriented design', 'Agent behaviors'],
     sourceAvailability: { type: 'coursework' },
     status: 'complete',
     media: {
       kind: 'gif',
       src: '/media/pathfinding-game.gif',
-      available: false,
+      available: true,
       alt: 'Gameplay recording of the pathfinding game showing characters navigating the map, chasing, retreating, and recovering health.',
-      caption: 'Gameplay demo: characters pathfind across the map and switch between chasing, retreating, and building health.',
-      width: 800,
-      height: 600,
+      caption: 'Gameplay demo: enemies pathfind across the map and switch between chasing the character, retreating, and building health.',
+      width: 600,
+      height: 470,
     },
     sections: [
       {
         heading: 'Overview',
         body: [
-          'Characters move across a grid-based map, computing routes around obstacles toward their current goal.',
+          'Characters move across a grid-based map trying to get to the goal while avoiding enemies that are chasing it.',
         ],
       },
       {
-        heading: 'Character behaviors',
+        heading: 'Player behaviors',
         body: [
-          'Chasing: a character pursues a target by repeatedly computing a path toward it.',
-          'Retreating: when threatened, a character moves away to a safer position.',
-          'Building health: characters can recover health before re-engaging.',
+          'Moving: the player moves around the map to get to the goal using the keyboard. The player can move up, down, left, and right.',
+          'Collision detection: the player collides with the enemies and the obstacles. When the player collides with an enemy, the player loses health.',
+          'Collecting items: the player can collect items to gain health or use as projectile weapons against the enemies.', 
+          'Accessing inventory: the player can cycle through the inventory using the TAB key and use the item by pressing the spacebar.',
+          'Goal: the player reaches the goal to win the level.',
+        ],
+      },
+      {
+        heading: 'AI Enemy behaviors',
+        body: [
+          'Chasing: an enemy pursues the player by repeatedly computing a path toward it.',
+          'Retreating: when threatened, an enemy moves away to a safer position to rebuild its health.',
+          'Building health: enemies can recover health before re-engaging.',
         ],
       },
     ],
