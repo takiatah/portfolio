@@ -77,6 +77,12 @@ export const getDataLabCaseStudyHref = (slug: string) => {
 
 /* ----------------------------- Machine Learning Lab ---------------------------- */
 
+export interface ModelResult {
+  model: string
+  config: string
+  validationAccuracy: number
+}
+
 export const titanicProject: Project = {
   slug: 'titanic',
   title: 'Titanic Predictions',
@@ -90,14 +96,8 @@ export const titanicProject: Project = {
   status: 'complete',
 }
 
-export interface TitanicModelResult {
-  model: string
-  config: string
-  validationAccuracy: number
-}
-
 /** Values copied from the printed outputs in the repository notebook. */
-export const titanicResults: TitanicModelResult[] = [
+export const titanicResults: ModelResult[] = [
   {
     model: 'RandomForestClassifier (scikit-learn)',
     config: 'n_estimators=100, max_depth=4, random_state=1',
@@ -115,6 +115,31 @@ export const titanicFeatures = [
   { name: 'Sex', description: 'Passenger sex, one-hot encoded' },
   { name: 'SibSp', description: 'Number of siblings / spouses aboard' },
   { name: 'Parch', description: 'Number of parents / children aboard' },
+]
+
+export const tweetsProject: Project = {
+  slug: 'tweets',
+  title: 'Natural Language Processing with Disaster Tweets',
+  subtitle: 'Machine Learning Kaggle Competition',
+  category: 'Machine Learning / NLP / Kaggle Competition',
+  summary:
+    'Classifying whether tweets indicate a real disaster or not using Natural Language Processing, TenserFlow, and DistilBERT.',
+  tech: ['Python', 'Pandas', 'scikit-learn', 'TenserFLow', 'DistilBERT', 'Jupyter / Kaggle Notebook'],
+  sourceAvailability: { type: 'public', repoUrl: repoLinks.tweets },
+  links: [{ label: 'Kaggle Notebook', href: externalLinks.tweetsKaggleNotebook }],
+  status: 'complete',
+}
+
+export const tweetsResults: ModelResult[] = [
+  {
+    model: 'DistilBERT',
+    config: 'sequence_length=160, num_classes=2, loss=SparseCategoricalCrossentropy(from_logits=True), optimizer=Adam(learning_rate=1e-5), batch_size=32, epochs=2',
+    validationAccuracy: 0.8450,
+  }
+]
+
+export const tweetsFeatures = [
+  { name: 'text', description: 'Tweet about a potential disaster' },
 ]
 
 export const futureMlExperiments = [
@@ -323,7 +348,25 @@ export const designProjects: Project[] = [
         heading: 'Design decisions',
         body: ['A Mediterranean palette and generous food imagery set the atmosphere of the restaurant.'],
       },
+      {
+        heading: 'Image carousel hero',
+        body: ['Pages have a dynamic hero header that rotates through restaurant images and promotional items to keep users engaged.'],
+      },
+      {
+        heading: 'Form validation',
+        body: ['Ensures static form validation for booking a room or making a contact request.'],
+      },
     ],
+    links: [{ label: 'Olive & Vine Website', href: externalLinks.oliveAndVine }],
+    media: {
+      kind: 'image',
+      src: '/media/olive-and-vine.png',
+      available: true,
+      alt: 'Olive and Vine homepage',
+      caption: 'Preview: Olive & Vine Homepage',
+      width: 1200,
+      height: 750,
+    },
   },
   {
     slug: 'mangata-and-gallo',
@@ -358,6 +401,16 @@ export const designProjects: Project[] = [
         ],
       },
     ],
+    links: [{ label: 'Mangata & Gallo Website', href: externalLinks.mangataAndGallo }],
+    media: {
+      kind: 'image',
+      src: '/media/mangata-and-gallo.png',
+      available: true,
+      alt: 'Mangata and Gallo homepage',
+      caption: 'Preview: Mangata & Gallo Homepage',
+      width: 1200,
+      height: 750,
+    },
   },
   {
     slug: 'synergy',
@@ -391,6 +444,15 @@ export const designProjects: Project[] = [
         body: ['Reduce friction for beginners by turning goals into a clear, guided plan.'],
       },
     ],
+    media: {
+      kind: 'image',
+      src: '/media/synergy.png',
+      available: true,
+      alt: 'Synergy Overiew',
+      caption: 'Overview: Synergy',
+      width: 900,
+      height: 750,
+    },
   },
 ]
 

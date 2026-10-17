@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { PageHero } from '@/components/page-hero'
+import Image from 'next/image'
+import { MediaSlot } from '@/components/media-slot'
 import { ProjectActions } from '@/components/project-actions'
 import { TechTags } from '@/components/tech-tags'
 import { designProjects, isDesignConcept } from '@/lib/projects'
@@ -52,6 +54,20 @@ export default function DesignStudioPage() {
                   </div>
                 ))}
               </dl>
+              {p.media?.src && (
+                <div className="relative overflow-hidden rounded-xl border border-border lg:col-span-5">
+                  <Image
+                    src={p.media.src}
+                    alt={p.media.alt}
+                    width={p.media.width}
+                    height={p.media.height}
+                    className="h-auto w-full object-cover"
+                  />
+                <p className="border-t border-border px-4 py-3 text-sm text-muted-foreground">
+                  {p.media.caption}
+                </p>
+                </div>
+              )}
             </article>
           )
         })}

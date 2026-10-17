@@ -13,15 +13,19 @@ export const repoLinks = {
   snakeGame: repo('snake-game'),
   oliveAndVine: repo('olive-and-vine-website'),
   titanic: repo('Titanic-Predictions---Machine-Learning-Kaggle-Competition'),
+  tweets: repo('NLP-with-Disaster-Tweet-Predictions---Machine-Learning-Kaggle-Competition'),
   mangataAndGallo: repo('mangata-and-gallo-website'),
 } as const
 
 export const externalLinks = {
   onlineRetailKaggleNotebook: 'https://www.kaggle.com/code/takia2006/e-commerce-sales-analysis',
   titanicKaggleNotebook: 'https://www.kaggle.com/code/takia2006/titanic-machine-learning-predictions',
+  tweetsKaggleNotebook: 'https://www.kaggle.com/code/takia2006/disaster-tweets',
   bellabeatKaggleNotebook: 'https://www.kaggle.com/code/takia2006/bellabeat-case-study-using-python-and-sql',
   bellabeatTableau:
     'https://public.tableau.com/views/FitbitActivityAnalysisDashboards/ActivitybyHourandDayoftheWeekDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link',
   fitbitDataset: 'https://www.kaggle.com/datasets/arashnic/fitbit',
   gprDataset: 'https://www.matteoiacoviello.com/gpr.htm',
+  oliveAndVine: 'https://takiatah.github.io/olive-and-vine-website/',
+  mangataAndGallo: 'https://takiatah.github.io/mangata-and-gallo-website/',
 } as const

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { FlaskConical } from 'lucide-react'
 import { PageHero } from '@/components/page-hero'
 import { ProjectCard } from '@/components/project-card'
-import { futureMlExperiments, titanicProject, titanicResults } from '@/lib/projects'
+import { futureMlExperiments, titanicProject, titanicResults, tweetsProject, tweetsResults } from '@/lib/projects'
 
 export const metadata: Metadata = {
   title: 'Machine Learning Lab',
@@ -10,7 +10,8 @@ export const metadata: Metadata = {
 }
 
 export default function MachineLearningPage() {
-  const best = titanicResults.reduce((a, b) => (b.validationAccuracy > a.validationAccuracy ? b : a))
+  const bestTitanic = titanicResults.reduce((a, b) => (b.validationAccuracy > a.validationAccuracy ? b : a))
+  const bestTweets = tweetsResults.reduce((a, b) => (b.validationAccuracy > a.validationAccuracy ? b : a))
 
   return (
     <>
@@ -20,8 +21,26 @@ export default function MachineLearningPage() {
         description="Supervised learning experiments and Kaggle competitions, documented from problem definition to lessons learned."
         accentVar="--accent-ml"
       />
-      <section className="mx-auto grid max-w-6xl gap-6 px-4 py-12 lg:grid-cols-3">
-        <div className="lg:col-span-2">
+      <section className="mx-auto grid max-w-6xl gap-6 px-4 py-12 lg:grid-cols-3 lg:items-start">
+        <div className="flex flex-col gap-6 lg:col-span-2">
+          <ProjectCard project={tweetsProject} accentVar="--accent-ml" href="/machine-learning/tweets" featured>
+            <dl className="grid grid-cols-3 gap-3 rounded-xl border border-border bg-background/50 p-4 text-sm">
+              <div>
+                <dt className="text-muted-foreground">Problem</dt>
+                <dd className="font-medium">Natural Language Processing Binary classification</dd>
+              </div>
+              <div>
+                <dt className="text-muted-foreground">Model</dt>
+                <dd className="font-medium">DistilBert</dd>
+              </div>
+              <div>
+                <dt className="text-muted-foreground">Validation acc.</dt>
+                <dd className="font-medium tabular-nums">{(bestTweets.validationAccuracy * 100).toFixed(1)}%</dd>
+              </div>
+            </dl>
+          </ProjectCard>
+        </div>
+        <div className="flex flex-col gap-6 lg:col-span-2">
           <ProjectCard project={titanicProject} accentVar="--accent-ml" href="/machine-learning/titanic" featured>
             <dl className="grid grid-cols-3 gap-3 rounded-xl border border-border bg-background/50 p-4 text-sm">
               <div>
@@ -34,12 +53,12 @@ export default function MachineLearningPage() {
               </div>
               <div>
                 <dt className="text-muted-foreground">Validation acc.</dt>
-                <dd className="font-medium tabular-nums">{(best.validationAccuracy * 100).toFixed(1)}%</dd>
+                <dd className="font-medium tabular-nums">{(bestTitanic.validationAccuracy * 100).toFixed(1)}%</dd>
               </div>
             </dl>
           </ProjectCard>
         </div>
-        <aside className="flex flex-col gap-4 rounded-2xl border border-dashed border-border p-6">
+        <aside className="flex flex-col gap-4 rounded-2xl border border-dashed border-border p-6 lg:col-start-3 lg:row-start-1">
           <span className="flex size-10 items-center justify-center rounded-full bg-ml/15 text-ml">
             <FlaskConical className="size-5" aria-hidden="true" />
           </span>

@@ -38,7 +38,7 @@ export default function TitanicPage() {
         </div>
       </PageHero>
 
-      <article className="mx-auto max-w-3xl px-4 py-12">
+      <article className="mx-auto max-w-5xl px-4 py-12">
         <Section title="Problem">
           <p>
             The Kaggle Titanic competition asks for a model that predicts whether each passenger survived the sinking.
